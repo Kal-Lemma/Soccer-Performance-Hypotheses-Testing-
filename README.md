@@ -1,6 +1,6 @@
 # Soccer-Performance-Hypotheses-Testing-
 ## DataSet
-Using the European Soccer Database from Kaggle.com, my co-worker, BG Lemmon and I began to sift through the data and think of different hypotheses that could be relevant. 
+Using the European Soccer Database from Kaggle.com, my co-worker, BG Lemmon and I began to sift through the data and think of different hypotheses that could be relevant.
 
 ## Hypotheses
 
@@ -63,7 +63,13 @@ After the results of Question #2, I expected that we would not be able to reject
 
 ## Question #4: Does being a home team increase your odds of winning a match overall?
 
+Created columns for home wins for each team, not including draws, and found win percentage rates for each one. Conducted multiple distributions to check for skewness and kurtosis. Used a kernel density estimation plot that showed it was positively highly skewed to the right, where our mean and median are greater than the mode. Also had very low kurtosis, platykurtic distribution where our peak is lower and Broader than a Normal Distribution (fatter right-side tail).
 
+Conducted a Repeated T-Test to account for using the same team twice for home and away. Measuring the average home and away wins, and checking whether they differ significantly across their games.
+
+* Ttest_relResult (*T-statistic* = 22.98522690915607, *pvalue* = 2.4129466452683866e-79)
+
+Our very small pvalue and large T-stat shows that our Null hypothesis (Home and away wins have no statistical difference in averages) is False and can be rejected.
 
 ## Takeaways:
 
